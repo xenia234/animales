@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Animales Domésticos</title>
+    <link rel="stylesheet" href="estilos.css"/>
+    <style>
+        body {
+            background-color: #F0F8FF;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background: #333;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+        nav ul li a:hover {
+            background: #575757;
+        }
+        #content {
+            flex: 1;
+            padding: 20px;
+        }
+        .article {
+            margin-bottom: 20px;
+        }
+        aside {
+            background: #f4f4f4;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer marquee {
+            background: #006699;
+            color: #FFFFCC;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+            #content, aside {
+                margin: 10px 0;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header, footer {
+                padding: 5px 0;
+            }
+            nav ul li a {
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <header>
+        <h1>Página de Animales Domésticos</h1>
+    </header>
+    <marquee bgcolor="#006699" behavior="alternate" direction="right">
+        <b><font color="#FFFFCC" size="5"> Conoce más sobre tus mascotas... </font></b>
+    </marquee>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+    <div class="clearfix"></div>
+    <section id="content">
+        <article class="article">
+            <h2>Perros</h2>
+            <p>Los perros son animales leales y protectores. Son conocidos por su inteligencia y capacidad para ser entrenados.</p>
+            <p>Existen diversas razas con características únicas.</p>
+        </article>
+
+        <article class="article">
+            <h2>Gatos</h2>
+            <p>Los gatos son animales independientes y curiosos. Son conocidos por su agilidad y habilidades de caza.</p>
+            <p>Los gatos domésticos pueden ser excelentes compañeros.</p>
+        </article>
+
+        <article class="article">
+            <h2>Pájaros</h2>
+            <p>Los pájaros son animales coloridos y cantores. Muchos disfrutan tener aves como mascotas por su belleza y melodías.</p>
+            <p>Requieren cuidados especiales y espacio adecuado para volar.</p>
+        </article>
+    </section>
+    
+    <aside>
+        <h2>Barra Lateral</h2>
+        <form>
+            <input type="text" placeholder="Buscar...">
+            <input type="submit" value="Buscar"/>
+        </form>
+    </aside>
+
+    <div class="clearfix"></div>
+
+    <footer>
+        <marquee behavior="alternate" direction="left">
+            <b>Animales Domésticos &copy; 2024</b>
+        </marquee>
+    </footer>
+</div>
+
+</body>
+</html>
